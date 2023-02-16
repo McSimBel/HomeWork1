@@ -1,0 +1,23 @@
+{
+  "compilerOptions": {
+    "module": "ES2020",
+    "target": "ES2020",
+    "lib": ["es2015", "dom"],
+    "sourceMap": true,
+    "experimentalDecorators": true
+  },
+  "exclude": [
+    "node_modules"
+  ],
+  "files": [
+    "./main.ts"
+  ],
+  "include": [
+    "src/**/*"
+//    "./files/**/*" будут компилироваться все файлы в рвзделе "files"
+  ],
+  "extends": "@tsconfig/node18/tsconfig.json",
+//  "extends": "./tsconfig-extends.json",
+  "compileOnSave": true
+}
+
