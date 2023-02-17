@@ -10,7 +10,7 @@ export interface IUserInfo {
     age: number,
     organization: IOrganization
 }
-const JohnInfoArray: IUserInfo = {
+const user1InfoArray: IUserInfo = {
     userid: '127e4567-e89b-12d3-a458-426614174000',
     name: 'John',
     birthdate: '1982-02-17T21:00:00.000Z',
@@ -21,7 +21,7 @@ const JohnInfoArray: IUserInfo = {
     }
 };
 
-const AnnaInfoArray: IUserInfo = {
+const user2InfoArray: IUserInfo = {
     userid: '127e4567-e89a-12f3-a458-327395154000',
     name: 'Anna',
     birthdate: '1988-02-17T21:00:00.000Z',
@@ -32,6 +32,6 @@ const AnnaInfoArray: IUserInfo = {
     }
 };
 export let usersInfoArray: IUserInfo[] = [
-    JohnInfoArray,
-    AnnaInfoArray
+    user1InfoArray,
+    user2InfoArray
 ];

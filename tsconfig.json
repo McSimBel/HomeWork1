@@ -10,7 +10,7 @@
     "node_modules"
   ],
   "files": [
-    "./main.ts"
+    "./index.ts"
   ],
   "include": [
     "src/**/*"
