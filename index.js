@@ -4,10 +4,10 @@ const totalArray = usersArray.map((item, index) => ({ ...item, ...usersInfoArray
 function getUserInfo(totalArray) {
     let UsersJobPositions = [];
     let newUserJobPosition;
-    totalArray.forEach(function (v) {
+    totalArray.forEach(function (v, i) {
         newUserJobPosition = {
             name: v.name,
-            // position: v.organization.position,
+            position: usersInfoArray[i].organization.position,
             age: v.age,
             gender: v.gender
         };

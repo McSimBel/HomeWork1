@@ -1,26 +1,23 @@
 
 import {IUser, usersArray} from './users.js';
-import {IUserInfo, usersInfoArray} from './userInfo.js';
+import {usersInfoArray} from './userInfo.js';
 
 export interface IUsersResume{
     name: string,
-    position?: string,
-    age?: number,
+    position: string,
+    age: number,
     gender: string
 }
 
-const totalArray: IUser[] = usersArray.map((item, index) => ({...item, ...usersInfoArray[index]}));
 
-
-function getUserInfo(totalArray: IUser[]) {
+function getUserInfo(usersArray: IUser[]) {
     let UsersJobPositions:IUsersResume[] = [];
-    let newUserJobPosition:IUsersResume;
-    totalArray.forEach(
+    usersArray.forEach(
         function (v,i) {
-            newUserJobPosition = {
+            let newUserJobPosition:IUsersResume = {
                 name: v.name,
                 position: usersInfoArray[i].organization.position,
-                age: v.age,
+                age: usersInfoArray[i].age,
                 gender: v.gender
             }
             UsersJobPositions.unshift(newUserJobPosition);
@@ -30,6 +27,6 @@ function getUserInfo(totalArray: IUser[]) {
 }
 
 
-const usersPositions = getUserInfo(totalArray);
+const usersPositions = getUserInfo(usersArray);
 console.log('userPositions', usersPositions);
 
