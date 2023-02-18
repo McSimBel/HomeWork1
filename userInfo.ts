@@ -1,9 +1,9 @@
 
-export interface IOrganization{
+interface IOrganization{
     name: string,
     position: string
 }
-export interface IUserInfo {
+interface IUserInfo {
     userid: string,
     name: string,
     birthdate: string,

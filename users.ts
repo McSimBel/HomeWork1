@@ -1,11 +1,6 @@
-import {IOrganization, IUserInfo} from "./userInfo";
-
 export interface IUser {
     userid: string,
     name: string,
-    birthdate?: string,
-    age?: number,
-    organization?: IOrganization
     gender: string
 }
 

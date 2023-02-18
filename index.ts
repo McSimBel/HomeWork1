@@ -9,7 +9,6 @@ export interface IUsersResume{
     gender: string
 }
 
-
 function getUserInfo(usersArray: IUser[]) {
     let UsersJobPositions:IUsersResume[] = [];
     usersArray.forEach(
