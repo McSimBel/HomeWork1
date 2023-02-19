@@ -1,22 +1,31 @@
 
 import {IUser, usersArray} from './users.js';
-import {usersInfoArray} from './userInfo.js';
+import {usersInfoArray} from "./userInfo.js";
 
-export interface IUsersResume{
+
+interface IUsersResume{
     name: string,
-    position: string,
-    age: number,
+    position?: string,
+    age?: number,
     gender: string
 }
 
 function getUserInfo(usersArray: IUser[]) {
     let UsersJobPositions:IUsersResume[] = [];
     usersArray.forEach(
-        function (v,i) {
-            let newUserJobPosition:IUsersResume = {
+        function (v) {
+            let userById: any = usersInfoArray.find(item => item.userid === v.userid);
+            let newUserJobPosition:IUsersResume;
+            if (userById === undefined) {
+                newUserJobPosition = {
+                    name: v.name,
+                    gender: v.gender
+                }
+            }
+            else newUserJobPosition = {
                 name: v.name,
-                position: usersInfoArray[i].organization.position,
-                age: usersInfoArray[i].age,
+                position: userById.organization.position,
+                age: userById.age,
                 gender: v.gender
             }
             UsersJobPositions.unshift(newUserJobPosition);

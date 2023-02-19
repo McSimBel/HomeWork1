@@ -10,7 +10,7 @@
     "node_modules"
   ],
   "files": [
-    "./index.ts"
+    "./index.ts", "./users.ts", "./userInfo.ts"
   ],
   "include": [
     "src/**/*"
